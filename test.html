@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+	
+	<title>Roxy's Photography Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/photo.css">
+	<link rel="stylesheet" type="text/css" href="css/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="building.html">
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|Space+Mono:400,700' rel='stylesheet' type='text/css'>
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="css/swipebox.css">
+
+</head>
+
+<body>
+
+
+<section id="exemple" class="container">
+        <div class="wrap small-width">
+            <div id="try"></div>
+            <ul id="box-container">
+                <li class="box">
+                    <a href="http://swipebox.csag.co/images/image-1.jpg" class="swipebox" title="Fog">
+                        <img src="http://swipebox.csag.co/images/image-1.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="http://swipebox.csag.co/images/image-2.jpg" class="swipebox" title="City">
+                        <img src="http://swipebox.csag.co/images/image-2.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="http://swipebox.csag.co/images/image-3.jpg" class="swipebox" title="Street">
+                        <img src="http://swipebox.csag.co/images/image-3.jpg" alt="image">
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="http://swipebox.csag.co/images/image-4.jpg" class="swipebox" title="Mustache Guy">
+                        <img src="http://swipebox.csag.co/images/image-4.jpg" alt="image">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/jquery.swipebox.js"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+
+            /* Basic Gallery */
+            $( '.swipebox' ).swipebox();
+            
+            /* Video */
+            $( '.swipebox-video' ).swipebox();
+
+            /* Dynamic Gallery */
+            $( '#gallery' ).click( function( e ) {
+                e.preventDefault();
+                $.swipebox( [
+                    { href : 'http://swipebox.csag.co/mages/image-1.jpg', title : 'My Caption' },
+                    { href : 'http://swipebox.csag.co/images/image-2.jpg', title : 'My Second Caption' }
+                ] );
+            } );
+
+      });
+    </script>
+</body>
+
+</html>
